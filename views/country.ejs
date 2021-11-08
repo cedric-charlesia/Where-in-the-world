@@ -1,0 +1,87 @@
+<%- include('./partials/header-country.ejs') %>
+      <button type="button" id="btn_back" class="btn__back">Previous page</button>
+    </header>
+    <main class="country__container--single">
+      <div class="country__single--img">
+        <img
+          src="/images/flags/<%= country.flag %>"
+          alt="country flag"
+          class="country__flag--single"
+        />
+      </div>
+      <section class="section__details">
+      <div class="country__card--single">
+        <h2 class="country__name--single"><%= country.name %></h2>
+        <p class="country__info--single">
+          Native name: 
+          <span class="country__info--details"><%= country.demonym %></span>
+        </p>
+        <p class="country__info--single">
+          Population: 
+          <span class="country__info--details"><%= country.population.toLocaleString('en-EN') %></span>
+        </p>
+        <p class="country__info--single">
+          Region: 
+          <span class="country__info--details"><%= country.region %></span>
+        </p>
+        <p class="country__info--single">
+          Sub Region: 
+          <span class="country__info--details"><%= country.subregion %></span>
+        </p>
+        <p class="country__info--single">
+          Capital: 
+          <span class="country__info--details"><%= country.capital %></span>
+        </p>
+        <p class="country__info--single">
+          Country Code: 
+          <span class="country__info--details"><%= country.alpha2Code %></span>
+        </p>
+        <p class="country__info--single">
+          Currency: 
+          <span class="country__info--details"><%= country.currencies[0].name %> (<%= country.currencies[0].symbol %>)</span>
+        </p>
+        <p class="country__info--single">
+          Language(s): <% for( let i = 0; i < country.languages.length; i++ ) { %>
+          <span class="country__info--details"><%= country.languages[i].name %></span>
+          <% } %>
+        </p>
+        <p class="country__info--single">
+          Typical dish: 
+          <span class="country__info--details"><%= country.dish %></span>
+        </p>
+        <div class="country__borders">
+          <p class="country__info--single">
+            Border countries: </p>
+            <% if (country.borders !== undefined) {
+              for( let j = 0; j < country.borders.length; j++ ) { %>
+            <a href="<%= country.borders[j].toLowerCase() %>" class="country__info--link"><%= country.borders[j] %></a>
+            <% }
+          } else { %>
+            <span class="country__info--details">-</span>
+          <% } %>
+        </div>
+        </div>
+        <div class="country__info">
+        <table class="time-table">
+          <thead>
+            <th>Timezone</th>
+            <th>Current Time</th>
+          <tbody>
+            <% for( let k = 0; k < country.timezones.length; k++ ) { %>
+            <tr class="country__info--details">
+              <td><%= country.timezones[k] %></td>
+              <td><%= currentTime.tz(country.timezones[k]).format("dddd, DD MMMM YYYY, HH:mm") %></td>
+              </tr>
+              <% } %>
+          </tbody>
+          </thead>
+        </table>
+      </div>
+      </section>
+    </main>
+    <footer class="country__footer">
+      <p>Where in the world? by Cédric CHARLESIA &copy; <%= currentTime.format("YYYY") %></p>
+    </footer>
+    <script src="/js/script_country.js"></script>
+  </body>
+</html>

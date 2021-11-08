@@ -1,0 +1,34 @@
+<main class="country__container">
+  <% for(const country of countryList) { %>
+
+  <div class="country__card">
+    <img
+      src="/images/flags/<%= country.flag %>"
+      alt="<%= country.name %> flag"
+      class="country__flag"
+    />
+    <h3 class="country__name"><%= country.name %></h3>
+    <p class="country__info">
+      Population:
+      <span class="country__info--details"><%= country.population.toLocaleString('en-EN') %></span>
+    </p>
+    <p class="country__info">
+      Region:
+      <span class="country__info--details"><%= country.name %></span>
+    </p>
+    <p class="country__info">
+      Capital:
+      <span class="country__info--details"><%= country.capital %></span>
+    </p>
+    <p class="country__info">
+      Current Time:
+      <span class="country__info--details"
+        ><%= currentTime.tz(country.timezones[0]).format("dddd, DD MMMM YYYY, HH:mm") %></span
+      >
+    </p>
+    <a href="/country/<%= country.name.toLowerCase() %>" class="more-info"
+      >more info about <%= country.name %></a
+    >
+  </div>
+  <% } %>
+</main>

@@ -1,0 +1,41 @@
+<main class="country__container">
+  <% let country = []; 
+    for(const countries of countryList) { 
+      country.push(countries);
+    }%>
+
+  <% for (let i=0; i<5; i++) { 
+    let randomCountry = country[Math.floor(Math.random() * country.length)];
+    %>
+
+  <div class="country__card">
+    <img
+      src="/images/flags/<%= randomCountry.flag %>"
+      alt="<%= randomCountry.name %> flag"
+      class="country__flag"
+    />
+    <h2 class="country__name"><%= randomCountry.name %></h2>
+    <p class="country__info">
+      Population:
+      <span class="country__info--details"><%= randomCountry.population.toLocaleString('en-EN') %></span>
+    </p>
+    <p class="country__info">
+      Region:
+      <span class="country__info--details"><%= randomCountry.name %></span>
+    </p>
+    <p class="country__info">
+      Capital:
+      <span class="country__info--details"><%= randomCountry.capital %></span>
+    </p>
+    <p class="country__info">
+      Current Time:
+      <span class="country__info--details"
+        ><%= currentTime.tz(randomCountry.timezones[0]).format("dddd, DD MMMM YYYY, HH:mm") %></span
+      >
+    </p>
+    <a href="/country/<%= randomCountry.name.toLowerCase() %>" class="more-info"
+      >more info about <%= randomCountry.name %></a
+    >
+  </div>
+  <% } %>
+</main>

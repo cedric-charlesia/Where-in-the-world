@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Where in the world - Countries (fun) facts</title>
+  </head>
+  <body>
+    <header class="country__header">
+      <div class="header__top">
+        <h1 class="header__title"><a href="/" id="main__title">Where in the world?</a></h1>
+        <div class="switch__theme">
+          <button class="btn-switch-theme" id="switch-theme"></button>
+        </div>
+      </div>
+       
+      <div class="header__form">
+        <p class="warning">Please enter something inside the field</p>
+        <form action="/search" method="GET" class="search__country">
+          <input
+            type="text"
+            name="country"
+            placeholder="Search for a country"
+            id="search"
+            class="search-country" autocomplete="off"
+          />
+          <button type="submit" class="btn">Search</button>
+        </form>
+        <button type="button" class="btn__random"><a href="../random-countries" class="button__link">Random countries</a></button>
+        <form action="search.ejs" method="GET" class="search__country">
+         
+          <select name="region" id="select-region" class="select-region">
+            <option value="#">Select a region</option>
+            <option value="All">All countries</option>
+            <option value="Africa">Africa</option>
+            <option value="America">America</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania">Oceania</option>
+          </select>
+        </form>
+      </div>
+    </header>
