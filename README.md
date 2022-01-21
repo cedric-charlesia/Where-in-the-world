@@ -10,7 +10,7 @@ Aimant beaucoup la géographie, je me suis lancé le défi.
 
 Au départ, je souhaitais utiliser l'API de *restcountries.eu* mais entre le moment où j'ai trouvé le challenge et le moment où j'ai démarré le projet, l'API a été supprimée !
 
-En foullant sur le net, j'ai trouvé des fichiers ``JSON`` avec des infos concernant les pays du monde.
+En fouillant sur le net, j'ai trouvé des fichiers ``JSON`` avec des infos concernant les pays du monde.
 J'ai donc copié ces données en ne gardant que ce qui m'intéressait, et en y ajoutant des données comme les plats nationauxs des pays.
 
 ## Les outils et technologies utilisés :
