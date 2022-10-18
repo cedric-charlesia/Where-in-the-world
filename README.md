@@ -1,6 +1,6 @@
 # Where in the world?
 
-![Where in the world? homepage](https://cedriccharlesia.com/img/where-in-the-world.jpg)
+![Where in the world? homepage](https://cedriccharlesia.com/img/project-screenshots/where-in-the-world.jpg
 
 Je suis tombé sur ce challenge [REST countries API](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca) proposé par frontend mentor.
 
