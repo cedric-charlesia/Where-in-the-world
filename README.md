@@ -1,4 +1,5 @@
 # Where in the world?
+Une application web de fun facts sur les pays.
 
 ![Where in the world? homepage](https://cedriccharlesia.com/img/project-screenshots/where-in-the-world.jpg)
 
