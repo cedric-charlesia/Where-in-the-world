@@ -6,6 +6,7 @@ Ce projet [REST countries API](https://www.frontendmentor.io/challenges/rest-cou
 
 ## Lancer le projet
 **`npm install`** pour installer les dépendences
+
 **`npm start`** dans le répertoire à la racine du projet
 
 ## Les outils et technologies utilisés :
