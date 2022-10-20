@@ -80,7 +80,7 @@ body {
 .warning {
   display: none;
   position: absolute;
-  top: 0;
+  top: -40%;
   color: red;
   font-weight: bold;
   font-size: 0.9rem;
@@ -261,7 +261,7 @@ td {
     width: 80%;
   }
   .warning {
-    top: -5%;
+    top: -40%;
     left: 10%;
   }
 }
@@ -296,8 +296,12 @@ td {
   .header__title {
     margin: 0;
   }
+  .header__title a {
+    font-size: 1.5rem;
+  }
   .header__form {
     display: block;
+    padding: 0.3rem 1rem;
   }
   .search-country {
     width: 100%;
@@ -321,14 +325,14 @@ td {
     padding: 0;
   }
   .country__container--single {
-    padding: 0;
+    padding: 0 1.5rem;
   }
   .country__info {
     padding: 0;
   }
   .warning {
-    top: -17%;
-    left: 34%;
+    top: -25%;
+    left: 25%;
   }
 }
 
